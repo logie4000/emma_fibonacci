@@ -4,7 +4,7 @@
 
 import java.util.*;
 
-public class MyProgram {
+public class Fibonacci {
     public static void main(String[] args) {
         System.out.println("Entering a number greater than 93 will overflow a variable and give an inaccurate result.");
         // Create scanner & get input
