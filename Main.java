@@ -3,6 +3,7 @@
 */
 
 import java.util.*;
+import java.math.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,20 +16,21 @@ public class Main {
         int end = input.nextInt();
         
         // Initialize variables
-        long toAdd = 1;
-        long toPrint = 0;
+        BigInteger aBigInt = new BigInteger(1);
+        BigInteger bBigInt = new BigInteger(1);
         
         // Loop to print output
         for (int i = 1; i <= end; i++) {
             // Print output
             while(i >= start) {
                 System.out.print(i + ".\t");
-                System.out.println(toPrint);
+                System.out.println(aBigInt);
                 break;
             }
             // Advance variables
-            toPrint += toAdd;
-            toAdd = toPrint - toAdd;
+            BigInteger cBigInt = aBigInt.add(bBigInt);
+            aBigInt = bBigInt;
+            bBigInt = cBigInt;
         }
     }
 }
