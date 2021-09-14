@@ -6,7 +6,7 @@ import java.util.*;
 
 public class MyProgram {
     public static void main(String[] args) {
-        System.out.println("Entering a number greater than 93 will overflow a variable and give\nan inaccurate result.");
+        System.out.println("Entering a number greater than 93 will overflow a variable and give an inaccurate result.");
         // Create scanner & get input
         Scanner input = new Scanner(System.in);
         System.out.print("Start position (<94): ");
@@ -17,7 +17,6 @@ public class MyProgram {
         // Initialize variables
         long toAdd = Long.parseUnsignedLong(1);
         long toPrint = Long.parseUnsignedLong(0);
-        String toPrintStr = Long.toUnsignedString(toPrint);
         
         // Loop to print output
         for (int i = 1; i <= end; i++) {
@@ -30,7 +29,6 @@ public class MyProgram {
             // Advance variables
             toPrint += toAdd;
             toAdd = toPrint - toAdd;
-            toPrintStr = Long.toUnsignedString(toPrint);
         }
     }
 }
