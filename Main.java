@@ -1,10 +1,10 @@
 /*
  * A program to print out sections of the Fibonacci Sequence
- */
+*/
 
 import java.util.*;
 
-public class MyProgram {
+public class Main {
     public static void main(String[] args) {
         System.out.println("Entering a number greater than 93 will overflow a variable and give an inaccurate result.");
         // Create scanner & get input
@@ -15,15 +15,15 @@ public class MyProgram {
         int end = input.nextInt();
         
         // Initialize variables
-        long toAdd = Long.parseUnsignedLong(1);
-        long toPrint = Long.parseUnsignedLong(0);
+        long toAdd = 1;
+        long toPrint = 0;
         
         // Loop to print output
         for (int i = 1; i <= end; i++) {
             // Print output
             while(i >= start) {
                 System.out.print(i + ".\t");
-                System.out.println(toPrintStr);
+                System.out.println(toPrint);
                 break;
             }
             // Advance variables
